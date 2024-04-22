@@ -11,6 +11,9 @@ class File extends Component {
     return (
       <div className="file">
         <div className="filename">{id}</div>
+        <div className="close" onClick={() => this.props.removeFile(id)}>
+          &times;
+        </div>
         {metadata.map((m) => (
           <Input
             {...m}
@@ -357,6 +360,11 @@ class App extends Component {
     );
     this.setState({ files, validated: false });
   };
+  removeFile = (id) => {
+    var { files } = this.state;
+    files = files.filter((f) => f.id !== id);
+    this.setState({ files });
+  };
   downloadFile = (id) => {
     var { campaign, files } = this.state;
     var file = files.find((f) => f.id === id);
@@ -421,7 +429,11 @@ class App extends Component {
                 />
               </div>
               {files.map((f) => (
-                <File file={f} onChange={this.onFileChange} />
+                <File
+                  file={f}
+                  onChange={this.onFileChange}
+                  removeFile={this.removeFile}
+                />
               ))}
               <button className="create" onClick={this.createMetadata}>
                 Create Metadata
