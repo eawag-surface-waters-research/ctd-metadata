@@ -1,0 +1,726 @@
+[
+  {
+    "id": 1,
+    "name": "Lake Geneva"
+  },
+  {
+    "id": 2,
+    "name": "Lake Biel"
+  },
+  {
+    "id": 3,
+    "name": "Greifensee"
+  },
+  {
+    "id": 6,
+    "name": "Lake Aegeri"
+  },
+  {
+    "id": 7,
+    "name": "Lake Baldegg"
+  },
+  {
+    "id": 8,
+    "name": "Lake Hallwil"
+  },
+  {
+    "id": 10,
+    "name": "Upper Lake Constance"
+  },
+  {
+    "id": 12,
+    "name": "Lake Brienz"
+  },
+  {
+    "id": 14,
+    "name": "Lake Maggiore"
+  },
+  {
+    "id": 15,
+    "name": "Lake Cadagno"
+  },
+  {
+    "id": 17,
+    "name": "Lac de Joux"
+  },
+  {
+    "id": 22,
+    "name": "Upper Lake Lugano"
+  },
+  {
+    "id": 24,
+    "name": "Lower Lake Lugano"
+  },
+  {
+    "id": 27,
+    "name": "Lake Neuchâtel"
+  },
+  {
+    "id": 30,
+    "name": "Lake Lucerne Alpnachersee"
+  },
+  {
+    "id": 57,
+    "name": "Lake Lützel"
+  },
+  {
+    "id": 4,
+    "name": "Upper Lake Zurich"
+  },
+  {
+    "id": 5,
+    "name": "Lower Lake Zurich"
+  },
+  {
+    "id": 16,
+    "name": "Lake Thun"
+  },
+  {
+    "id": 18,
+    "name": "Soppensee"
+  },
+  {
+    "id": 23,
+    "name": "Lake Sempach"
+  },
+  {
+    "id": 26,
+    "name": "Lake Murten"
+  },
+  {
+    "id": 28,
+    "name": "Lake Pfäffikon"
+  },
+  {
+    "id": 29,
+    "name": "Lake Sarnen"
+  },
+  {
+    "id": 33,
+    "name": "Türlersee"
+  },
+  {
+    "id": 34,
+    "name": "Lake Lucerne Gersauer and Treibbecken"
+  },
+  {
+    "id": 35,
+    "name": "Walensee"
+  },
+  {
+    "id": 37,
+    "name": "Lake Lucerne Kreuztrichter and Vitznauerbecken"
+  },
+  {
+    "id": 39,
+    "name": "Lake Zug"
+  },
+  {
+    "id": 188,
+    "name": "Rhonesee"
+  },
+  {
+    "id": 149,
+    "name": "Oberer Chatzensee"
+  },
+  {
+    "id": 19,
+    "name": "Lac de la Gruyère"
+  },
+  {
+    "id": 183,
+    "name": "Lac de Bret"
+  },
+  {
+    "id": 172,
+    "name": "Lioson"
+  },
+  {
+    "id": 190,
+    "name": "Lac Lioson"
+  },
+  {
+    "id": 65,
+    "name": "Geistsee"
+  },
+  {
+    "id": 47,
+    "name": "Daubensee"
+  },
+  {
+    "id": 48,
+    "name": "Lej da Vadret"
+  },
+  {
+    "id": 50,
+    "name": "Lac Noir"
+  },
+  {
+    "id": 9,
+    "name": "Oeschinensee"
+  },
+  {
+    "id": 63,
+    "name": "Lenkerseeli"
+  },
+  {
+    "id": 55,
+    "name": "Mauensee"
+  },
+  {
+    "id": 56,
+    "name": "Multiple"
+  },
+  {
+    "id": 134,
+    "name": "Stockseewli"
+  },
+  {
+    "id": 31,
+    "name": "Lake Lucerne Urnersee"
+  },
+  {
+    "id": 25,
+    "name": "Lake Lungern"
+  },
+  {
+    "id": 38,
+    "name": "Lake Sils"
+  },
+  {
+    "id": 40,
+    "name": "Lake Silvaplana"
+  },
+  {
+    "id": 41,
+    "name": "Lake St. Moritz"
+  },
+  {
+    "id": 44,
+    "name": "Lake Lauerz"
+  },
+  {
+    "id": 45,
+    "name": "Rotsee"
+  },
+  {
+    "id": 137,
+    "name": "Atzenholzweiher"
+  },
+  {
+    "id": 138,
+    "name": "Eselschwanzweiher"
+  },
+  {
+    "id": 139,
+    "name": "Gräppelensee"
+  },
+  {
+    "id": 140,
+    "name": "Stadtweiher Wil"
+  },
+  {
+    "id": 141,
+    "name": "Voralpsee"
+  },
+  {
+    "id": 53,
+    "name": "Lower Lake Constance"
+  },
+  {
+    "id": 11,
+    "name": "Hüttwilersee"
+  },
+  {
+    "id": 145,
+    "name": "Hüttnersee"
+  },
+  {
+    "id": 146,
+    "name": "Schiffenensee"
+  },
+  {
+    "id": 147,
+    "name": "Egelsee"
+  },
+  {
+    "id": 148,
+    "name": "Mettmenhaslisee"
+  },
+  {
+    "id": 150,
+    "name": "Unterer Chatzensee"
+  },
+  {
+    "id": 151,
+    "name": "Oberer Husemersee"
+  },
+  {
+    "id": 152,
+    "name": "Unterer Husemersee"
+  },
+  {
+    "id": 153,
+    "name": "Rietweiher"
+  },
+  {
+    "id": 154,
+    "name": "Seeweidsee"
+  },
+  {
+    "id": 155,
+    "name": "Towagsee"
+  },
+  {
+    "id": 156,
+    "name": "Wattweiher"
+  },
+  {
+    "id": 59,
+    "name": "Lake Garda"
+  },
+  {
+    "id": 60,
+    "name": "Lake Baikal"
+  },
+  {
+    "id": 61,
+    "name": "Guetschweiher"
+  },
+  {
+    "id": 62,
+    "name": "Weiherhus"
+  },
+  {
+    "id": 64,
+    "name": "Oberes Bänzlauiseeli"
+  },
+  {
+    "id": 66,
+    "name": "Aegelsee"
+  },
+  {
+    "id": 67,
+    "name": "Amsoldingersee"
+  },
+  {
+    "id": 68,
+    "name": "Arnensee"
+  },
+  {
+    "id": 69,
+    "name": "Aarbergweiher"
+  },
+  {
+    "id": 70,
+    "name": "Bachsee (Bachalpsee)"
+  },
+  {
+    "id": 71,
+    "name": "Baggersee Bönigen"
+  },
+  {
+    "id": 72,
+    "name": "Burgäschisee"
+  },
+  {
+    "id": 73,
+    "name": "Baggersee Hunziken"
+  },
+  {
+    "id": 74,
+    "name": "Baggersee Kiesen"
+  },
+  {
+    "id": 75,
+    "name": "Baggersee Münsingen"
+  },
+  {
+    "id": 76,
+    "name": "unterer Bachsee"
+  },
+  {
+    "id": 77,
+    "name": "Birkehofweiher"
+  },
+  {
+    "id": 78,
+    "name": "Blausee"
+  },
+  {
+    "id": 79,
+    "name": "Blüemlisalpsee"
+  },
+  {
+    "id": 80,
+    "name": "Baggersee Meienried"
+  },
+  {
+    "id": 81,
+    "name": "Büeltigenseelein"
+  },
+  {
+    "id": 82,
+    "name": "Burgseeli"
+  },
+  {
+    "id": 83,
+    "name": "Cul des Près"
+  },
+  {
+    "id": 84,
+    "name": "Dittligsee"
+  },
+  {
+    "id": 85,
+    "name": "Egelmösli"
+  },
+  {
+    "id": 86,
+    "name": "Engstlensee"
+  },
+  {
+    "id": 87,
+    "name": "Fräschelsweiher"
+  },
+  {
+    "id": 88,
+    "name": "Gadenlauisee"
+  },
+  {
+    "id": 89,
+    "name": "Gantrischseeli"
+  },
+  {
+    "id": 54,
+    "name": "Inkwilersee"
+  },
+  {
+    "id": 91,
+    "name": "Gelmersee"
+  },
+  {
+    "id": 157,
+    "name": "Berglimattsee"
+  },
+  {
+    "id": 174,
+    "name": "Meiefallseeli"
+  },
+  {
+    "id": 177,
+    "name": "Lac Duzillet"
+  },
+  {
+    "id": 179,
+    "name": "Lac Nervaux"
+  },
+  {
+    "id": 181,
+    "name": "Lac Ter"
+  },
+  {
+    "id": 158,
+    "name": "Bettenauer Weiher"
+  },
+  {
+    "id": 159,
+    "name": "Bildweiher"
+  },
+  {
+    "id": 160,
+    "name": "Chammseeli"
+  },
+  {
+    "id": 161,
+    "name": "Lago Barone"
+  },
+  {
+    "id": 162,
+    "name": "Lago di Tome"
+  },
+  {
+    "id": 185,
+    "name": "Lac de Morgins"
+  },
+  {
+    "id": 187,
+    "name": "Lac du Grand Saint-Bernard"
+  },
+  {
+    "id": 13,
+    "name": "Lago di Vogorno"
+  },
+  {
+    "id": 20,
+    "name": "Klöntalersee"
+  },
+  {
+    "id": 21,
+    "name": "Lago Ritom"
+  },
+  {
+    "id": 32,
+    "name": "Lac de l'Hongrin"
+  },
+  {
+    "id": 42,
+    "name": "Sihlsee"
+  },
+  {
+    "id": 92,
+    "name": "Gerzensee"
+  },
+  {
+    "id": 93,
+    "name": "Grimselsee"
+  },
+  {
+    "id": 94,
+    "name": "Hagelseewli"
+  },
+  {
+    "id": 95,
+    "name": "Hinterburgseeli"
+  },
+  {
+    "id": 96,
+    "name": "Hinterstockensee"
+  },
+  {
+    "id": 97,
+    "name": "Iffigsee"
+  },
+  {
+    "id": 99,
+    "name": "Kiesgrube Heimberg"
+  },
+  {
+    "id": 100,
+    "name": "Lauenensee"
+  },
+  {
+    "id": 101,
+    "name": "kleiner Lauenensee"
+  },
+  {
+    "id": 102,
+    "name": "Les Chaufours"
+  },
+  {
+    "id": 104,
+    "name": "Lobsigensee"
+  },
+  {
+    "id": 105,
+    "name": "Baggersee Lütscheren"
+  },
+  {
+    "id": 106,
+    "name": "La Marnière"
+  },
+  {
+    "id": 107,
+    "name": "Mühliguetweiher"
+  },
+  {
+    "id": 108,
+    "name": "Moossee"
+  },
+  {
+    "id": 109,
+    "name": "Chli Moossee"
+  },
+  {
+    "id": 110,
+    "name": "Muggeseeli"
+  },
+  {
+    "id": 111,
+    "name": "La Noz"
+  },
+  {
+    "id": 112,
+    "name": "Oberaarsee"
+  },
+  {
+    "id": 114,
+    "name": "Oberstockensee"
+  },
+  {
+    "id": 115,
+    "name": "Räterichsbodensee"
+  },
+  {
+    "id": 116,
+    "name": "Remersee"
+  },
+  {
+    "id": 117,
+    "name": "Sägistalsee"
+  },
+  {
+    "id": 118,
+    "name": "Seebodensee"
+  },
+  {
+    "id": 119,
+    "name": "Seebergsee"
+  },
+  {
+    "id": 120,
+    "name": "Siselenweiher"
+  },
+  {
+    "id": 121,
+    "name": "Spittelmattesee"
+  },
+  {
+    "id": 122,
+    "name": "Steinsee"
+  },
+  {
+    "id": 123,
+    "name": "Obers Sulsseewli"
+  },
+  {
+    "id": 124,
+    "name": "Tällisee 1"
+  },
+  {
+    "id": 125,
+    "name": "Triebtenseewli"
+  },
+  {
+    "id": 126,
+    "name": "Tschingelsee"
+  },
+  {
+    "id": 127,
+    "name": "Uebeschisee"
+  },
+  {
+    "id": 128,
+    "name": "Lac Vert"
+  },
+  {
+    "id": 129,
+    "name": "vorderer Walopsee"
+  },
+  {
+    "id": 130,
+    "name": "Weiher bei Hardern"
+  },
+  {
+    "id": 131,
+    "name": "Weiher bei Hagneck (Länggrabenweiher)"
+  },
+  {
+    "id": 132,
+    "name": "Widi"
+  },
+  {
+    "id": 133,
+    "name": "Wyssensee"
+  },
+  {
+    "id": 135,
+    "name": "Stazersee"
+  },
+  {
+    "id": 136,
+    "name": "Lej da Champfer"
+  },
+  {
+    "id": 142,
+    "name": "Hasensee Ost"
+  },
+  {
+    "id": 143,
+    "name": "Hasensee West"
+  },
+  {
+    "id": 144,
+    "name": "Nussbaumersee"
+  },
+  {
+    "id": 164,
+    "name": "Lago Superiore"
+  },
+  {
+    "id": 165,
+    "name": "Milchspüelersee"
+  },
+  {
+    "id": 166,
+    "name": "Oberer Engisee"
+  },
+  {
+    "id": 167,
+    "name": "Schlossweiher"
+  },
+  {
+    "id": 168,
+    "name": "Unterer Engisee"
+  },
+  {
+    "id": 169,
+    "name": "Vorder Schwendisee"
+  },
+  {
+    "id": 170,
+    "name": "Wenigerweiher"
+  },
+  {
+    "id": 171,
+    "name": "Wichensteiner See"
+  },
+  {
+    "id": 173,
+    "name": "Lake Kivu"
+  },
+  {
+    "id": 176,
+    "name": "Lac Bretaye"
+  },
+  {
+    "id": 180,
+    "name": "Lac Retaud"
+  },
+  {
+    "id": 182,
+    "name": "Lac d'Aï"
+  },
+  {
+    "id": 186,
+    "name": "Lac de Taney"
+  },
+  {
+    "id": 43,
+    "name": "Wägitalersee"
+  },
+  {
+    "id": 49,
+    "name": "Lake Davos"
+  },
+  {
+    "id": 51,
+    "name": "Lago di Poschiavo"
+  },
+  {
+    "id": 175,
+    "name": "Lac Brenet"
+  },
+  {
+    "id": 184,
+    "name": "Lac des Chavonnes"
+  },
+  {
+    "id": 163,
+    "name": "Lago di Sassolo"
+  },
+  {
+    "id": 189,
+    "name": "Caldonazzo"
+  }
+]

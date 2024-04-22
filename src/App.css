@@ -1,0 +1,223 @@
+/* Master CSS */
+
+
+/* Fonts */
+
+@font-face {
+  font-family: "exo";
+  src: url("fonts/exo/Exo-Italic-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 1 999;
+}
+
+.select-search-container {
+  --select-search-background: #ffffff;
+  --select-search-border: #313244;
+  --select-search-selected: #89b4fa;
+  --select-search-text: #000000;
+  --select-search-subtle-text: #a6adc8;
+  --select-search-highlight: #cccccc;
+  width: 100%;
+}
+
+.select-search-container:not(.select-search-is-multiple) .select-search-select {
+  top: 38px;
+}
+
+.select-search-input {
+  height: auto;
+  line-height: normal;
+  width: 100%;
+}
+
+:root {
+  --sidebar-width: 400px;
+  --cell-size: 40px;
+  --e-global-color-primary: #04133E;
+  --e-global-color-secondary: #0457E7;
+  --e-global-color-text: #04133E;
+  --e-global-color-accent: #00EB3C;
+  --e-global-color-accent-opacity: #00eb3b94;
+  --e-global-color-subtle-accent: #026e3d;
+  --e-global-color-732b564: #F5F1ED;
+  --e-global-color-05f99e9: #FFFFFF;
+}
+
+@media screen and (max-width: 800px) {
+  :root {
+    --sidebar-width: 330px;
+    --cell-size: 30px;
+  }
+}
+
+.main {
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  padding: 50px 0;
+  box-sizing: border-box;
+  font-family: "Frutiger Neue LT Pro", "Arial", sans-serif;
+}
+
+.main .content {
+  width: 800px;
+  margin: auto;
+  max-width: 100%;
+  background-color: white;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 1px 6px;
+}
+
+.main .content .title {
+  padding: 22px 22px 0 22px;
+  font-size: 23px;
+  text-align: center;
+}
+
+.main .content .title .logo img {
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+.main .content .form {
+  padding: 0 0 22px 22px;
+}
+
+.main .content .form .section {
+  font-size: 22px;
+  margin: 30px 0 20px 0;
+  color: #525252;
+}
+
+.main .content .form .section-details {
+  width: calc(100% - 22px);
+  font-size: 14px;
+}
+
+.main .content .form .form-input {
+  display: inline-block;
+  width: calc(100% - 22px);
+  margin: 10px 0;
+}
+
+.main .content .form .form-input.half {
+  width: calc(50% - 22px);
+  margin-right: 22px;
+}
+
+.main .content .form .form-input input {
+  display: block;
+  padding: 6px 8px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  margin: 2px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.main .content .form .form-input input[type="checkbox"] {
+  display: inline-block;
+  width: auto;
+  margin-left: 12px;
+}
+
+.main .content .form .form-input.error input {
+  border-color: red;
+}
+
+.main .content .form .form-input .error {
+  float: right;
+  color: red;
+  display: none;
+  font-size: 10px;
+  margin-top: 4px;
+}
+
+.main .content .form .form-input.error .error {
+  display: block;
+}
+
+.main .content .form .drop-area {
+  width: calc(100% - 22px);
+  padding: 30px;
+  border: 1px dashed darkgrey;
+  box-sizing: border-box;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.main .content .form .drop-area input {
+  display: none;
+}
+
+.main .content .form .file {
+  border: 1px solid #c1c1c1;
+  width: calc(100% - 22px);
+  border-radius: 12px;
+  margin-top: 22px;
+  padding: 22px 0 22px 22px;
+  box-sizing: border-box;
+}
+
+.main .content .form .file .filename {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.main .content .form button.create {
+  padding: 10px 20px;
+  background-color: #118ec6;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 1px 6px;
+  cursor: pointer;
+  margin-top: 22px;
+}
+
+.main .content .form button:hover {
+  box-shadow: none;
+}
+
+.main .content .form .download-file {
+  border: 1px solid #bebebe;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 22px;
+  width: calc(100% - 22px);
+  box-sizing: border-box;
+  padding: 19px 12px;
+}
+
+.main .content .form .download-file .download-icon {
+  float: right;
+  padding: 10px 20px;
+  background-color: #118ec6;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 1px 6px;
+  cursor: pointer;
+  margin-top: -10px;
+}
+
+@media screen and (max-width: 800px) {
+  .main {
+    padding: 0;
+  }
+
+  .main .content {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+  .main .content .form .form-input.half {
+    width: calc(100% - 22px);
+    margin-right: 22px;
+  }
+
+}

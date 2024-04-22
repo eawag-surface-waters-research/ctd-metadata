@@ -1,0 +1,73 @@
+{
+  "sencast_bucket": "https://eawagrs.s3.eu-central-1.amazonaws.com",
+  "layers": [
+    {
+      "id": "eyeonwater",
+      "type": "eyeonwater_points",
+      "description": "Secchi depth measurements from Eyeonwater",
+      "properties": {
+        "model": "Eyeonwater",
+        "lake": "geneva",
+        "parameter": "secchi",
+        "unit": "m",
+        "display": "tiff",
+        "depth": false,
+        "period": false,
+        "options": {
+          "paletteName": "navia reverse",
+          "zIndex": 2,
+          "opacity": 1,
+          "min": 0,
+          "max": 20,
+          "unit": "m"
+        }
+      }
+    },
+    {
+      "id": "tiff",
+      "type": "sencast_tiff",
+      "description": "Secchi depth processed from Sentinel 3 data using the Sencast python package. See the QAA algorithm by Lee et al. for details.",
+      "properties": {
+        "model": "Sentinel3",
+        "lake": "geneva",
+        "parameter": "secchi",
+        "metadata": "https://eawagrs.s3.eu-central-1.amazonaws.com/metadata/sentinel3/geneva_Zsd_lee.json",
+        "unit": "m",
+        "display": "tiff",
+        "depth": false,
+        "period": false,
+        "options": {
+          "paletteName": "navia reverse",
+          "zIndex": 2,
+          "opacity": 1,
+          "convolve": 2,
+          "min": 0,
+          "max": 20,
+          "unit": "m"
+        }
+      }
+    },
+    {
+      "id": "wms",
+      "type": "sentinel_hub_wms",
+      "description": "RGB real color Sentinel 2 images provided by Sentinel-Hub.",
+      "properties": {
+        "model": "Sentinel2",
+        "lake": "geneva",
+        "parameter": "realcolor",
+        "metadata": "https://eawagrs.s3.eu-central-1.amazonaws.com/metadata/sentinel2/geneva_Z490.json",
+        "wms": "https://services.sentinel-hub.com/ogc/wms/a595b5c3-8963-4076-98ad-5cbe7e9d7999",
+        "unit": "",
+        "display": "wms",
+        "depth": false,
+        "period": false,
+        "options": {
+          "layer": "TRUE_COLOR",
+          "gain": 1,
+          "gamma": 1,
+          "zIndex": 0
+        }
+      }
+    }
+  ]
+}
