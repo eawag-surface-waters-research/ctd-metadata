@@ -1,11 +1,8 @@
-# Lemanscope React
-Lemanscope map
+# CTD Metadata
 
 [![License: MIT][mit-by-shield]][mit-by]
 
-This is the map-component for the [Lemanscope](https://lemanscope.org/) project build in React v18. Lemanscope is a  EPFL participatory science project in collaboration with the Association for the Protection of Lake Geneva (ASL) and EAWAG for measuring the transparency and color of Lake Geneva.
-
-The online deployement can be found at https://lemanscope.org
+This is form for entering CTD metadata build in React v18. 
 
 ![React][React] ![TypeScript][TypeScript] ![Javascript][javascript-by-shield]
 
