@@ -158,7 +158,7 @@ class App extends Component {
         value: "",
         label: "General comment",
         example: "Rainy, windy",
-        validate: "string",
+        validate: "none",
         css: "full",
         error: false,
       },
