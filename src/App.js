@@ -131,7 +131,7 @@ class App extends Component {
         value: 0,
         label: "Time Zone device (UTC+)",
         example: "0",
-        validate: "int",
+        validate: "string",
         css: "half",
         error: false,
       },
@@ -140,7 +140,7 @@ class App extends Component {
         value: 1,
         label: "Time Zone local (UTC+)",
         example: "1",
-        validate: "int",
+        validate: "string",
         css: "half",
         error: false,
       },
@@ -264,10 +264,6 @@ class App extends Component {
       return false;
     } else if (type === "string") {
       if (value.length > 0) {
-        return false;
-      }
-    } else if (type === "int") {
-      if (Number.isInteger(value)) {
         return false;
       }
     } else if (type === "xcoord") {
