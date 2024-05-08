@@ -128,7 +128,7 @@ class App extends Component {
       },
       {
         type: "number",
-        value: 0,
+        value: "0",
         label: "Time Zone device (UTC+)",
         example: "0",
         validate: "string",
@@ -137,7 +137,7 @@ class App extends Component {
       },
       {
         type: "number",
-        value: 1,
+        value: "1",
         label: "Time Zone local (UTC+)",
         example: "1",
         validate: "string",
