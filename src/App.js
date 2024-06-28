@@ -47,6 +47,13 @@ class Input extends Component {
             placeholder={example}
             onChange={(event) => onChange(event, label)}
           />
+        ) : type === "select" ? (
+          <select
+            value={value}
+            onChange={(event) => onChange(event, label)}
+          >
+            {this.props.options.map(o => <option value={o} key={o}>{o}</option>)}
+          </select>
         ) : (
           <input
             type={type}
@@ -73,19 +80,20 @@ class App extends Component {
         error: false,
       },
       {
-        type: "text",
-        value: "",
+        type: "select",
+        value: "Sea&Sun CTD (189)",
         label: "Device",
-        example: "Sea & Sun CTD",
-        validate: "string",
-        css: "half",
-        error: false,
-      },
-      {
-        type: "text",
-        value: "",
-        label: "Serial No",
-        example: "281",
+        example: "Sea&Sun CTD (189)",
+        options: [
+          "Sea&Sun CTD (189)",
+          "Sea&Sun CTD (281)",
+          "Sea&Sun CTD (1807)",
+          "Seabird CTD (6090)",
+          "Seabird CTD (7322)",
+          "RBR CTD (205750)",
+          "RBR CTD (66131)",
+          "RBR CTD (60506)",
+          "Other - Add type to comments"],
         validate: "string",
         css: "half",
         error: false,
@@ -154,6 +162,16 @@ class App extends Component {
         error: false,
       },
       {
+        type: "select",
+        value: "CH1903 (Swiss Grid)",
+        label: "Coordinate System",
+        example: "CH1903 (Swiss Grid)",
+        options: ["CH1903 (Swiss Grid)", "WGS84 (Latitude, Longitude)"],
+        validate: "string",
+        css: "half",
+        error: false,
+      },
+      {
         type: "text",
         value: "",
         label: "General comment",
@@ -189,6 +207,7 @@ class App extends Component {
         label: "X Coordinate (CH1903)",
         example: 533000,
         validate: "xcoord",
+        filter: "CH1903 (Swiss Grid)",
         css: "half",
         error: false,
       },
@@ -198,6 +217,27 @@ class App extends Component {
         label: "Y Coordinate (CH1903)",
         example: 146000,
         validate: "ycoord",
+        filter: "CH1903 (Swiss Grid)",
+        css: "half",
+        error: false,
+      },
+      {
+        type: "number",
+        value: "",
+        label: "Latitude",
+        example: 46.5,
+        validate: "lat",
+        filter: "WGS84 (Latitude, Longitude)",
+        css: "half",
+        error: false,
+      },
+      {
+        type: "number",
+        value: "",
+        label: "Longitude",
+        example: 6.67,
+        validate: "lng",
+        filter: "WGS84 (Latitude, Longitude)",
         css: "half",
         error: false,
       },
@@ -282,6 +322,22 @@ class App extends Component {
           return "Invalid value";
         }
       }
+    } else if (type === "lat") {
+      if (value) {
+        if (value > -90 && value < 90) {
+          return false;
+        } else {
+          return "Invalid value";
+        }
+      }
+    } else if (type === "lng") {
+      if (value) {
+        if (value > -180 && value < 180) {
+          return false;
+        } else {
+          return "Invalid value";
+        }
+      }
     }
     return true;
   };
@@ -338,13 +394,15 @@ class App extends Component {
     this.setFiles(inputFiles);
   };
   setFiles = (inputFiles) => {
-    var { files, fileMetadata, extensions } = this.state;
+    var { files, fileMetadata, extensions, campaign } = this.state;
+    var coords = campaign.find(c => c.label === "Coordinate System")["value"]
     var count = 0;
     for (let inputFile of inputFiles) {
       let name = inputFile.name;
       let extension = name.substring(name.length - 4).toLowerCase();
       if (extensions.includes(extension)) {
         let metadata = JSON.parse(JSON.stringify(fileMetadata));
+        metadata = metadata.filter(m => !("filter" in m) || m["filter"] === coords)
         files.push({ id: inputFile.name, metadata, download: false });
         count = count + 1;
       }
@@ -427,6 +485,7 @@ class App extends Component {
               {files.map((f) => (
                 <File
                   file={f}
+                  key={f}
                   onChange={this.onFileChange}
                   removeFile={this.removeFile}
                 />
