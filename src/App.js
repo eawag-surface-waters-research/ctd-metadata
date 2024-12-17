@@ -80,6 +80,15 @@ class App extends Component {
         error: false,
       },
       {
+        type: "text",
+        value: "",
+        label: "Project Name",
+        example: "Project X",
+        validate: "string",
+        css: "half",
+        error: false,
+      },
+      {
         type: "select",
         value: "Sea&Sun CTD (189)",
         label: "Device",
@@ -101,8 +110,8 @@ class App extends Component {
       {
         type: "text",
         value: "",
-        label: "Project Name",
-        example: "Project X",
+        label: "Serial No",
+        example: "xxxxx",
         validate: "string",
         css: "half",
         error: false,
