@@ -467,7 +467,7 @@ class App extends Component {
     for (let p of file.metadata) {
       fileOut[p.label] = p.value;
     }
-    var output = { filename: id, campaign: campaignOut, profile: fileOut };
+    var output = { filename: id, valid: true, campaign: campaignOut, profile: fileOut };
     const jsonString = JSON.stringify(output, null, 2);
     const blob = new Blob([jsonString], { type: "text/plain;charset=utf-8" });
     const url = URL.createObjectURL(blob);
