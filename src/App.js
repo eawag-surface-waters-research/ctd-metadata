@@ -28,14 +28,17 @@ class File extends Component {
 
 class Input extends Component {
   render() {
-    var { type, value, label, example, css, error, onChange } = this.props;
+    var { type, value, label, example, css, error, onChange, extra } =
+      this.props;
     var options = lakes.map((l) => {
       l.value = l.name;
       return l;
     });
     return (
       <div className={error ? "form-input error " + css : "form-input " + css}>
-        <span className="label">{label}</span>
+        <span className="label">
+          {label} {extra && <b>{extra}</b>}
+        </span>
         <div className="error">
           {typeof error === "boolean" ? "Required" : error}
         </div>
@@ -48,11 +51,12 @@ class Input extends Component {
             onChange={(event) => onChange(event, label)}
           />
         ) : type === "select" ? (
-          <select
-            value={value}
-            onChange={(event) => onChange(event, label)}
-          >
-            {this.props.options.map(o => <option value={o} key={o}>{o}</option>)}
+          <select value={value} onChange={(event) => onChange(event, label)}>
+            {this.props.options.map((o) => (
+              <option value={o} key={o}>
+                {o}
+              </option>
+            ))}
           </select>
         ) : (
           <input
@@ -102,7 +106,8 @@ class App extends Component {
           "RBR CTD (205750)",
           "RBR CTD (66131)",
           "RBR CTD (60506)",
-          "Other - Add type to comments"],
+          "Other - Add type to comments",
+        ],
         validate: "string",
         css: "half",
         error: false,
@@ -263,7 +268,8 @@ class App extends Component {
         type: "number",
         value: "",
         label: "Start pressure (dbar)",
-        example: "",
+        extra: "Lowest",
+        example: "Not required",
         validate: "none",
         css: "half",
         error: false,
@@ -272,7 +278,8 @@ class App extends Component {
         type: "number",
         value: "",
         label: "End pressure (dbar)",
-        example: "",
+        extra: "Highest",
+        example: "Not required",
         validate: "none",
         css: "half",
         error: false,
@@ -431,14 +438,16 @@ class App extends Component {
   };
   setFiles = (inputFiles) => {
     var { files, fileMetadata, extensions, campaign } = this.state;
-    var coords = campaign.find(c => c.label === "Coordinate System")["value"]
+    var coords = campaign.find((c) => c.label === "Coordinate System")["value"];
     var count = 0;
     for (let inputFile of inputFiles) {
       let name = inputFile.name;
       let extension = name.substring(name.length - 4).toLowerCase();
       if (extensions.includes(extension)) {
         let metadata = JSON.parse(JSON.stringify(fileMetadata));
-        metadata = metadata.filter(m => !("filter" in m) || m["filter"] === coords)
+        metadata = metadata.filter(
+          (m) => !("filter" in m) || m["filter"] === coords
+        );
         files.push({ id: inputFile.name, metadata, download: false });
         count = count + 1;
       }
@@ -467,7 +476,12 @@ class App extends Component {
     for (let p of file.metadata) {
       fileOut[p.label] = p.value;
     }
-    var output = { filename: id, valid: true, campaign: campaignOut, profile: fileOut };
+    var output = {
+      filename: id,
+      valid: true,
+      campaign: campaignOut,
+      profile: fileOut,
+    };
     const jsonString = JSON.stringify(output, null, 2);
     const blob = new Blob([jsonString], { type: "text/plain;charset=utf-8" });
     const url = URL.createObjectURL(blob);
